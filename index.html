@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalCommerce | L'Expert en Visibilité Locale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #00f2ff; /* Bleu néon */
+            --bg: #020202;
+            --text: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Arrière-plan animé */
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        /* Header / Accueil */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle at center, #001a1a 0%, #020202 100%);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin: 0;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 4px;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: #888;
+            max-width: 700px;
+            margin: 20px 0 40px 0;
+        }
+
+        /* Statistiques */
+        .stats-section {
+            padding: 80px 20px;
+            background: rgba(0, 242, 255, 0.02);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .stat-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Contenu Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 4px solid var(--accent);
+        }
+
+        /* Boutons et Contact */
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 40px var(--accent);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .contact-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <header>
+        <h1>DigitalCommerce</h1>
+        <p class="hero-sub">Nous ne créons pas seulement des sites. Nous créons des outils de croissance pour les commerçants qui veulent dominer leur marché local.</p>
+        <a href="#contact" class="btn">Propulser mon commerce</a>
+    </header>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">81%</span>
+                <p>des clients font une recherche en ligne avant de se rendre en boutique.</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">+76%</span>
+                <p>de trafic en magasin pour les commerces ayant un site optimisé localement.</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">24h/7</span>
+                <p>Votre vitrine ne ferme jamais. Elle vend pour vous même pendant votre sommeil.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>Pourquoi choisir notre solution ?</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Vitesse de pointe</h3>
+                <p>Un site lent fait fuir 50% des visiteurs. Nos architectures garantissent un chargement instantané sur smartphone.</p>
+            </div>
+            <div class="service-card">
+                <h3>Design futuriste</h3>
+                <p>Une image de marque moderne pour rassurer vos clients et montrer que vous êtes à la pointe du marché.</p>
+            </div>
+            <div class="service-card">
+                <h3>Référencement Local</h3>
+                <p>Apparaissez en haut de Google quand vos clients cherchent vos services dans votre ville.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <h2>Prêt pour le futur ?</h2>
+        <p>Parlons de votre projet et boostons votre chiffre d'affaires.</p>
+        <a href="tel:0611229497" class="contact-link">06 11 22 94 97</a>
+        <a href="mailto:digitalcommerce.pro@outlook.fr" class="contact-link" style="font-size: 1.2rem;">digitalcommerce.pro@outlook.fr</a>
+        <p style="margin-top: 40px; color: #555;">&copy; 2026 DigitalCommerce. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
